@@ -20,7 +20,7 @@ public class isPrimeMethod {
         boolean flag = false;
         
         for(int devider = 2; devider <= numberToCheck/2; devider++){
-            if (numberToCheck / devider ==0){
+            if ((numberToCheck %2) == 0){
                 flag = true;
                 break;
             }
