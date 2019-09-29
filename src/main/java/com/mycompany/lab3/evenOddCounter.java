@@ -6,6 +6,7 @@
 package com.mycompany.lab3;
 
 import java.util.Scanner;
+import java.util.Random;
 
 /**
  *
@@ -14,24 +15,34 @@ import java.util.Scanner;
 public class evenOddCounter {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("Please enter a number to check if it is prime");
-        int numberToCheck = keyboard.nextInt();
+        Random randomNumbers = new Random();
+        int totalOdd = 0;
+        int totalEven = 0;
+        double x;
         
-        boolean flag = false;
         
-        for(int devider = 2; devider <= numberToCheck/2; devider++){
-            if ((numberToCheck %2) == 0){
-                flag = true;
-                break;
+        
+        for(int i = 0; i <=100; i++){
+            x = randomNumbers.nextInt();
+            if((x %2) == 0){
+            totalEven = totalEven + 1;
+        }
+            else{
+            totalOdd = totalOdd + 1;
             }
         }
-        if (!flag)
-            System.out.println("The number you have entered is an odd number");
-        else
-            System.out.println("The number you entered is an even number");
+        System.out.println("The total of even numbers is " + totalEven + " the total number of odd is " + totalOdd);
                 
             
         
         
     }
+    /*
+    public static double getRandomNumber(x){
+
+    double x = Math.random();
+
+    return x;
+}
+*/
 }
