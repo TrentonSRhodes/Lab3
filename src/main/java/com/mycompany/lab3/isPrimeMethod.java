@@ -24,13 +24,14 @@ public class isPrimeMethod {
                 flag = true;
                 break;
             }
-            if (!flag)
+        }
+        if (!flag)
             System.out.println("The number you have entered is a prime number");
         else
             System.out.println("The number you entered is not a prime number");
                 
             
-        }
+        
         
     }
     
